@@ -1,0 +1,11 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - avocagrow_docker_data_postgres15:/var/lib/postgresql/data
+volumes:
+  avocagrow_docker_data_postgres15: { }
